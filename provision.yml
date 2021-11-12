@@ -33,7 +33,7 @@
         Name: Webserver subnet
     register: result_subnet
 
- - name: Create Internet Gateway
+  - name: Create Internet Gateway
     ec2_vpc_igw:
       vpc_id: "{{result_vpc.vpc.id}}"
       region: "{{aws_region}}"
